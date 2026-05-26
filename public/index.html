@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CryptoSandbox — AI Trading Terminal</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <span class="hex">⬡</span> CryptoSandbox
+      <span class="env-badge">DEMO</span>
+    </div>
+    <div class="header-stats">
+      <div class="stat-pill">
+        <span class="label">AGENTS</span>
+        <span class="value" id="agent-count">500</span>
+      </div>
+      <div class="stat-pill">
+        <span class="label">TRADES</span>
+        <span class="value" id="total-trades">0</span>
+      </div>
+      <div class="stat-pill">
+        <span class="label">TRADES/SEC</span>
+        <span class="value" id="tps">0</span>
+      </div>
+      <div class="stat-pill">
+        <span class="label">VOLUME/SEC</span>
+        <span class="value" id="vps">$0</span>
+      </div>
+      <div class="stat-pill highlight">
+        <span class="label">TOTAL VOLUME</span>
+        <span class="value" id="total-volume">$0</span>
+      </div>
+      <div class="stat-pill live">
+        <span class="dot"></span>LIVE
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="price-grid" id="price-grid"></section>
+
+    <div class="bottom-panels">
+      <section class="trade-feed">
+        <h3>Live Trade Feed</h3>
+        <div class="feed-header">
+          <span>Agent</span>
+          <span>Side</span>
+          <span>Pair</span>
+          <span>Amount</span>
+          <span>Strategy</span>
+        </div>
+        <div class="feed" id="trade-feed"></div>
+      </section>
+
+      <section class="chart-panel">
+        <div class="chart-header">
+          <h3>BTC/USDC</h3>
+          <span class="current-price" id="btc-current">$0</span>
+        </div>
+        <div class="chart-container">
+          <canvas id="btc-chart"></canvas>
+        </div>
+        <div class="chart-header" style="margin-top: 1rem;">
+          <h3>ETH/USDC</h3>
+          <span class="current-price" id="eth-current">$0</span>
+        </div>
+        <div class="chart-container">
+          <canvas id="eth-chart"></canvas>
+        </div>
+      </section>
+
+      <section class="leaderboard">
+        <h3>Agent Leaderboard</h3>
+        <div class="table-wrapper">
+          <table id="leaderboard-table">
+            <thead>
+              <tr>
+                <th>Agent</th>
+                <th>Strategy</th>
+                <th>P&amp;L</th>
+                <th>Trades</th>
+              </tr>
+            </thead>
+            <tbody id="leaderboard-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <section class="liquidation-banner" id="liquidation-banner"></section>
+  </main>
+
+  <footer>
+    <div>⚠️ DELIBERATELY VULNERABLE — Hackathon demo target</div>
+    <div>CryptoSandbox v2.0 | All data simulated</div>
+  </footer>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
