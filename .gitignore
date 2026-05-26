@@ -1,8 +1,8 @@
 node_modules/
-cryptosandbox.db
-cryptosandbox.db-journal
-cryptosandbox.db-shm
-cryptosandbox.db-wal
+cryptomaxing.db
+cryptomaxing.db-journal
+cryptomaxing.db-shm
+cryptomaxing.db-wal
 .env
 .env.local
 .DS_Store

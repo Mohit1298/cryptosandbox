@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: cryptosandbox
+    name: cryptomaxing
     runtime: node
     plan: free
     region: oregon

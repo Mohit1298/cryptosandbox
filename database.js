@@ -1,7 +1,7 @@
 const Database = require('better-sqlite3')
 const path = require('path')
 
-const DB_PATH = path.join(__dirname, 'cryptosandbox.db')
+const DB_PATH = path.join(__dirname, 'cryptomaxing.db')
 
 function initDatabase() {
   const db = new Database(DB_PATH)
@@ -150,11 +150,11 @@ function seedDatabase(db) {
     const userCount = db.prepare('SELECT COUNT(*) as c FROM users').get().c
     if (userCount === 0) {
       const users = [
-        { email: 'alice@cryptosandbox.io', password: 'password123', balance: 250000,    role: 'trader' },
-        { email: 'bob@cryptosandbox.io',   password: 'qwerty',      balance: 75000,     role: 'trader' },
-        { email: 'carol@cryptosandbox.io', password: 'carol2026',   balance: 500000,    role: 'trader' },
-        { email: 'admin@cryptosandbox.io', password: 'admin',       balance: 10000000,  role: 'admin'  },
-        { email: 'whale@cryptosandbox.io', password: 'bigmoney',    balance: 50000000,  role: 'trader' },
+        { email: 'alice@cryptomaxing.io', password: 'password123', balance: 250000,    role: 'trader' },
+        { email: 'bob@cryptomaxing.io',   password: 'qwerty',      balance: 75000,     role: 'trader' },
+        { email: 'carol@cryptomaxing.io', password: 'carol2026',   balance: 500000,    role: 'trader' },
+        { email: 'admin@cryptomaxing.io', password: 'admin',       balance: 10000000,  role: 'admin'  },
+        { email: 'whale@cryptomaxing.io', password: 'bigmoney',    balance: 50000000,  role: 'trader' },
       ]
       const insertUser = db.prepare(`
         INSERT INTO users (email, password, wallet_address, balance_usdc, api_key, role)
@@ -170,8 +170,8 @@ function seedDatabase(db) {
       const secrets = [
         { key: 'MASTER_API_KEY',     value: 'sk-sandbox-MASTER-KEY-superSecret-abc123456' },
         { key: 'JWT_SECRET',         value: 'jwt-super-secret-key-NEVER-EXPOSE-xyz789abc' },
-        { key: 'DATABASE_URL',       value: 'sqlite://./cryptosandbox.db' },
-        { key: 'ADMIN_PASSWORD',     value: 'CryptoSandboxAdmin2026!' },
+        { key: 'DATABASE_URL',       value: 'sqlite://./cryptomaxing.db' },
+        { key: 'ADMIN_PASSWORD',     value: 'CryptoMaxingAdmin2026!' },
         { key: 'TRADING_BOT_KEY',    value: 'sk-trading-bot-LIVE-KEY-GHIJKL789012' },
         { key: 'GOAT_PRIVATE_KEY',   value: '0xFAKEPRIVATEKEY123456789ABCDEF00000' },
         { key: 'WEBHOOK_SECRET',     value: 'wh_secret_MNOPQR345678901234' },

@@ -1,4 +1,4 @@
-# CryptoSandbox
+# CryptoMaxing
 
 ### AI Agent Trading Simulation + Security Research Platform
 
@@ -31,10 +31,10 @@ Then open: **http://localhost:4000**
 > install Xcode CLT or `build-essential`. On first install, `better-sqlite3`
 > compiles, which can take ~30s.
 
-To reset the database, delete `cryptosandbox.db*`:
+To reset the database, delete `cryptomaxing.db*`:
 
 ```bash
-rm -f cryptosandbox.db*
+rm -f cryptomaxing.db*
 ```
 
 ---
@@ -93,7 +93,7 @@ curl -s http://localhost:4000/api/stats
 ## Architecture
 
 ```
-crypto-sandbox/
+crypto-maxing/
 ├── server.js              ← Express + Socket.io backend
 ├── database.js            ← SQLite setup + seeding (500 agents, 10 currencies)
 ├── priceEngine.js         ← Realistic price walk with mean reversion
@@ -131,11 +131,11 @@ crypto-sandbox/
 
 | Email                       | Password    | Balance     | Role   |
 | --------------------------- | ----------- | ----------- | ------ |
-| alice@cryptosandbox.io      | password123 | $250,000    | trader |
-| bob@cryptosandbox.io        | qwerty      | $75,000     | trader |
-| carol@cryptosandbox.io      | carol2026   | $500,000    | trader |
-| admin@cryptosandbox.io      | admin       | $10,000,000 | admin  |
-| whale@cryptosandbox.io      | bigmoney    | $50,000,000 | trader |
+| alice@cryptomaxing.io      | password123 | $250,000    | trader |
+| bob@cryptomaxing.io        | qwerty      | $75,000     | trader |
+| carol@cryptomaxing.io      | carol2026   | $500,000    | trader |
+| admin@cryptomaxing.io      | admin       | $10,000,000 | admin  |
+| whale@cryptomaxing.io      | bigmoney    | $50,000,000 | trader |
 
 > All credentials are intentionally weak. They surface through SQL injection
 > and the unauthenticated `/api/users` endpoint.
@@ -155,7 +155,7 @@ Or manually:
 2. Connect your GitHub account and pick `Mohit1298/cryptosandbox`.
 3. Render detects `render.yaml` and provisions a free web service.
 4. First deploy takes ~3 min. The dashboard will be at
-   `https://cryptosandbox-XXXX.onrender.com`.
+   `https://cryptomaxing-XXXX.onrender.com`.
 
 > ⚠️ The free plan sleeps after 15 min of inactivity. The first request after
 > a sleep takes ~30 s while Render cold-starts the container. For demos, ping

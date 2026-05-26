@@ -54,7 +54,7 @@ module.exports = function(app, db, simulation) {
     const config = {}
     secrets.forEach(s => { config[s.key] = s.value })
     res.json({
-      platform: 'CryptoSandbox Trading Engine v2.1',
+      platform: 'CryptoMaxing Trading Engine v2.1',
       environment: 'production',
       ...config,
       agentApiKeys: db.prepare(
@@ -103,17 +103,17 @@ module.exports = function(app, db, simulation) {
   // VULNERABILITY 4: EXPOSED .env
   // ════════════════════════════════════════
   app.get('/.env', (req, res) => {
-    res.type('text/plain').send(`# CryptoSandbox Production Config
+    res.type('text/plain').send(`# CryptoMaxing Production Config
 # THIS FILE SHOULD NEVER BE PUBLIC
 NODE_ENV=production
 PORT=4000
-DATABASE_URL=sqlite://./cryptosandbox.db
+DATABASE_URL=sqlite://./cryptomaxing.db
 DATABASE_ADMIN_PASSWORD=Sup3rS3cr3tDB!
 JWT_SECRET=jwt-super-secret-key-NEVER-EXPOSE-xyz789abc
 JWT_EXPIRY=7d
 MASTER_API_KEY=sk-sandbox-MASTER-KEY-superSecret-abc123456
 TRADING_BOT_KEY=sk-trading-bot-LIVE-KEY-GHIJKL789012
-ADMIN_PASSWORD=CryptoSandboxAdmin2026!
+ADMIN_PASSWORD=CryptoMaxingAdmin2026!
 # GOAT Network
 GOAT_RPC_URL=https://mainnet.goat.network/rpc
 GOAT_AGENT_PRIVATE_KEY=0xFAKEPRIVATEKEY123456789ABCDEF00000
@@ -224,6 +224,6 @@ BINANCE_SECRET=fake-binance-secret-xyz789
   })
 
   app.get('/health', (req, res) => {
-    res.json({ status: 'running', platform: 'CryptoSandbox — DEMO ONLY' })
+    res.json({ status: 'running', platform: 'CryptoMaxing — DEMO ONLY' })
   })
 }

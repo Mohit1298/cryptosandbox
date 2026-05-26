@@ -1,5 +1,5 @@
 {
-  "name": "crypto-sandbox",
+  "name": "crypto-maxing",
   "version": "2.0.0",
   "description": "AI agent trading simulation — deliberately vulnerable hackathon demo target for ShieldClaw",
   "main": "server.js",

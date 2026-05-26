@@ -37,7 +37,7 @@ const PORT = process.env.PORT || 4000
 server.listen(PORT, () => {
   console.log(`
   ╔═══════════════════════════════════════════╗
-  ║   CryptoSandbox LIVE on port ${PORT}            ║
+  ║   CryptoMaxing LIVE on port ${PORT}              ║
   ║   ⚠️  DELIBERATELY VULNERABLE              ║
   ║   Dashboard: http://localhost:${PORT}           ║
   ╚═══════════════════════════════════════════╝
@@ -58,7 +58,7 @@ server.listen(PORT, () => {
 })
 
 function shutdown() {
-  console.log('\nShutting down CryptoSandbox...')
+  console.log('\nShutting down CryptoMaxing...')
   simulation.stop()
   server.close(() => {
     try { db.close() } catch (e) {}
