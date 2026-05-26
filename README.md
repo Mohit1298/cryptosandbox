@@ -147,11 +147,14 @@ crypto-sandbox/
 The repo ships with `render.yaml`. Render runs this as a single always-on Node
 service — the right shape for a stateful Express + Socket.io + SQLite app.
 
-1. Push this repo to GitHub.
-2. Go to <https://render.com/> → **New +** → **Blueprint**.
-3. Connect your GitHub account and pick this repo.
-4. Render detects `render.yaml` and provisions a free web service.
-5. First deploy takes ~3 min. The dashboard will be at
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Mohit1298/cryptosandbox)
+
+Or manually:
+
+1. Go to <https://render.com/> → **New +** → **Blueprint**.
+2. Connect your GitHub account and pick `Mohit1298/cryptosandbox`.
+3. Render detects `render.yaml` and provisions a free web service.
+4. First deploy takes ~3 min. The dashboard will be at
    `https://cryptosandbox-XXXX.onrender.com`.
 
 > ⚠️ The free plan sleeps after 15 min of inactivity. The first request after
