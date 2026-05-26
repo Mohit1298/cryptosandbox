@@ -38,7 +38,6 @@ server.listen(PORT, () => {
   console.log(`
   ╔═══════════════════════════════════════════╗
   ║   CryptoMaxing LIVE on port ${PORT}              ║
-  ║   ⚠️  DELIBERATELY VULNERABLE              ║
   ║   Dashboard: http://localhost:${PORT}           ║
   ╚═══════════════════════════════════════════╝
 
@@ -46,14 +45,6 @@ server.listen(PORT, () => {
   Currencies:       10
   Trades/second:    ~600
   Volume/second:    ~$2M
-
-  Vulnerabilities ready for ShieldClaw:
-    POST /api/login        → SQL injection
-    GET  /api/config       → API key exposure
-    GET  /api/wallet/:id   → Auth bypass
-    GET  /.env             → Credential exposure
-    GET  /api/users        → User list
-    GET  /api/agent-config → Agent key exposure
 `)
 })
 

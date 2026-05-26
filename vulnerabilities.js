@@ -157,7 +157,7 @@ BINANCE_SECRET=fake-binance-secret-xyz789
   })
 
   // ════════════════════════════════════════
-  // SECURE VERSIONS (for ShieldClaw blue-mode demo)
+  // SECURE VERSIONS
   // ════════════════════════════════════════
   app.post('/api/login-secure', (req, res) => {
     const { username, password } = req.body || {}
@@ -224,6 +224,6 @@ BINANCE_SECRET=fake-binance-secret-xyz789
   })
 
   app.get('/health', (req, res) => {
-    res.json({ status: 'running', platform: 'CryptoMaxing — DEMO ONLY' })
+    res.json({ status: 'running', platform: 'CryptoMaxing' })
   })
 }

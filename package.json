@@ -1,7 +1,7 @@
 {
   "name": "crypto-maxing",
   "version": "2.0.0",
-  "description": "AI agent trading simulation — deliberately vulnerable hackathon demo target for ShieldClaw",
+  "description": "AI agent trading simulation platform",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

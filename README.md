@@ -1,9 +1,6 @@
 # CryptoMaxing
 
-### AI Agent Trading Simulation + Security Research Platform
-
-> ⚠️ **DELIBERATELY VULNERABLE** — Hackathon demo target for ShieldClaw.
-> Never deploy publicly. All users, wallets, and balances are fake.
+### AI Agent Trading Simulation Platform
 
 ---
 
@@ -11,10 +8,10 @@
 
 A simulated high-frequency crypto trading platform running **500 AI trading
 agents** across **10 cryptocurrencies**. Generates **~600 trades/second** and
-**~$2M volume/second**. Built to be attacked by ShieldClaw during demos.
+**~$2M volume/second**.
 
-The dashboard shows a live, breathing platform — when ShieldClaw breaks in and
-exfiltrates wallets, API keys, and admin credentials, the drama is real.
+The dashboard shows a live trading terminal with real-time prices, trade feeds,
+and agent performance rankings.
 
 ---
 
@@ -137,8 +134,7 @@ crypto-maxing/
 | admin@cryptomaxing.io      | admin       | $10,000,000 | admin  |
 | whale@cryptomaxing.io      | bigmoney    | $50,000,000 | trader |
 
-> All credentials are intentionally weak. They surface through SQL injection
-> and the unauthenticated `/api/users` endpoint.
+> All credentials are intentionally weak for testing purposes.
 
 ---
 
@@ -161,8 +157,7 @@ Or manually:
 > a sleep takes ~30 s while Render cold-starts the container. For demos, ping
 > the URL once before going on stage.
 
-> ⚠️ The SQLite DB is ephemeral — each new deploy reseeds. That's the intended
-> behaviour for a fresh demo target.
+> The SQLite DB is ephemeral — each new deploy reseeds fresh data.
 
 ### Why not Vercel?
 
@@ -175,5 +170,4 @@ persistent process. Render (or Railway / Fly.io) gives you that.
 ## One Sentence
 
 > A live high-frequency crypto trading simulation running 500 AI agents
-> across 10 currencies at 600 trades/second — with six intentional
-> security vulnerabilities for ShieldClaw to find and exploit.
+> across 10 currencies at 600 trades/second.
